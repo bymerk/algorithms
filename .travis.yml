@@ -1,7 +1,6 @@
 language: go
 
 go:
-  - master
   - 1.14.x
   - 1.16.x
 
