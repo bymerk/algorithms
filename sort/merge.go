@@ -6,7 +6,7 @@ func MergeSort(nums []int) []int {
 	}
 
 	middle := len(nums) / 2
-	return merge(MergeSort(nums[0:len(nums)/2]), MergeSort(nums[middle:]))
+	return merge(MergeSort(nums[0:middle]), MergeSort(nums[middle:]))
 }
 
 func merge(a, b []int) []int {

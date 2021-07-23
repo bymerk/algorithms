@@ -21,7 +21,7 @@ func TestMergeSort(t *testing.T) {
 		{
 			name: "empty slice",
 			args: args{nums: []int{}},
-			want: nil,
+			want: []int{},
 		},
 		{
 			name: "even - sorted",

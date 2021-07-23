@@ -1,2 +1,3 @@
 # Algorithms
-___
+
+Big-O cheat sheet: https://www.bigocheatsheet.com/
