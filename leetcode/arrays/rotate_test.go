@@ -31,7 +31,7 @@ func TestRotateWithAllocate(t *testing.T) {
 			}
 
 			if got := arrays.Rotate(tt.args.nums, tt.args.k); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("RotateWithAllocate() = %v, want %v", got, tt.want)
+				t.Errorf("Rotate() = %v, want %v", got, tt.want)
 			}
 		})
 	}

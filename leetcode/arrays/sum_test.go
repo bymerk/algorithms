@@ -30,7 +30,7 @@ func TestTwoSum(t *testing.T) {
 			}
 
 			if got := arrays.TwoSumWithAllocate(tt.args.nums, tt.args.target); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("TwoSum() = %v, want %v", got, tt.want)
+				t.Errorf("TwoSumWithAllocate() = %v, want %v", got, tt.want)
 			}
 		})
 	}

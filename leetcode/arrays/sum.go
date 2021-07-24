@@ -1,5 +1,7 @@
 package arrays
 
+// https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/546/
+
 func TwoSum(nums []int, target int) []int {
 	for i := 0; i < len(nums); i++ {
 		for j := i + 1; j < len(nums); j++ {
