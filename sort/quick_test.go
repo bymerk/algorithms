@@ -9,7 +9,7 @@ import (
 	"github.com/bymerk/algorithms/sort"
 )
 
-func TestMergeSort(t *testing.T) {
+func TestQuickSort(t *testing.T) {
 	type args struct {
 		nums []int
 	}
@@ -36,33 +36,19 @@ func TestMergeSort(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := sort.MergeSort(tt.args.nums); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("MergeSort() = %v, want %v", got, tt.want)
-			}
-
-			if got := sort.MergeSortWithoutAppend(tt.args.nums); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("MergeSortWithoutAppend() = %v, want %v", got, tt.want)
+			if got := sort.QuickSort(tt.args.nums); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("QuickSort() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
 
-func BenchmarkMergeSort(b *testing.B) {
+func BenchmarkQuickSort(b *testing.B) {
 	rand.Seed(time.Now().Unix())
 	nums := rand.Perm(100)
 	b.ReportAllocs()
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		_ = sort.MergeSort(nums)
-	}
-}
-
-func BenchmarkMergeSortWithoutAppend(b *testing.B) {
-	rand.Seed(time.Now().Unix())
-	nums := rand.Perm(100)
-	b.ReportAllocs()
-	b.ResetTimer()
-	for i := 0; i < b.N; i++ {
-		_ = sort.MergeSortWithoutAppend(nums)
+		_ = sort.QuickSort(nums)
 	}
 }
